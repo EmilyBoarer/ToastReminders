@@ -1,3 +1,5 @@
+NOTE: If you downloded before 12:39 on 20/03/2020 it will use a lot of your computers resources, there is now a patch to stop that
+
 Use this program to prompt you about timings of lessons.
 If you want you can change the timings and messages in the "times" file, or even add your own ones
 
