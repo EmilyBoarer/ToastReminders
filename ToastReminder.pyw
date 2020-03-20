@@ -7,7 +7,8 @@ from win10toast import ToastNotifier
 
 toaster = ToastNotifier()
 
-toaster.show_toast("Toast Reminders","This is how you will be reminded")
+toaster.show_toast("Toast Reminders","This is how you will be reminded",
+                    icon_path="i.ico")
 
 data = []
 for d in open("times").read().split("\n"):
@@ -15,6 +16,7 @@ for d in open("times").read().split("\n"):
         data.append(d.split("~"))
 
 while True:
+    time.sleep(20)
     if datetime.datetime.today().weekday() < 5: # is a weekday (mon=0, sun=6)
         now = datetime.datetime.now()
         current_time = now.strftime("%H:%M")
@@ -23,7 +25,7 @@ while True:
                 toaster.show_toast(
                     t[1],
                     t[2],
-                    icon_path=None,
+                    icon_path="i.ico",
                     duration=60,
                     threaded=True
                     )
